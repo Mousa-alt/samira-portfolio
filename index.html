@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samira Belal | Senior Technical Office Architect</title>
+<meta name="description" content="Portfolio of Samira Belal — Senior Technical Office Architect specializing in interior fit-out, retail and hospitality projects across Egypt and Saudi Arabia.">
+<meta name="theme-color" content="#edeae5">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Samira Belal | Senior Technical Office Architect">
+<meta property="og:description" content="Portfolio of Samira Belal — Senior Technical Office Architect specializing in interior fit-out, retail and hospitality projects across Egypt and Saudi Arabia.">
+<meta property="og:image" content="https://mousa-alt.github.io/samira-portfolio/og.jpg">
+<meta property="og:url" content="https://mousa-alt.github.io/samira-portfolio/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Samira Belal | Senior Technical Office Architect">
+<meta name="twitter:description" content="Portfolio of Samira Belal — Senior Technical Office Architect specializing in interior fit-out, retail and hospitality projects across Egypt and Saudi Arabia.">
+<meta name="twitter:image" content="https://mousa-alt.github.io/samira-portfolio/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Samira Belal",
+  "jobTitle": "Senior Technical Office Architect",
+  "email": "samira_belal@yahoo.com",
+  "url": "https://mousa-alt.github.io/samira-portfolio/",
+  "sameAs": ["https://www.linkedin.com/in/samira-belal"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#edeae5;--bg2:#e0dcd6;--bg3:#d4cfc9;
+  --text:#38342f;--muted:#7a756e;
+  --accent:#5c5850;--accent2:#807b73;
+  --border:rgba(92,88,80,.18);
+  --ease:cubic-bezier(.25,.46,.45,.94);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden;cursor:none}
+
+/* ── Cursor ── */
+#cur{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%)}
+#cur2{position:fixed;width:36px;height:36px;border:1px solid var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease)}
+#cur2.big{width:70px;height:70px}
+
+/* ── Loader ── */
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9998;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2rem;transition:opacity .9s,visibility .9s}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.ll{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,6rem);font-weight:300;letter-spacing:.3em;color:var(--accent);overflow:hidden}
+.ll span{display:inline-block;animation:slideUp .7s var(--ease) both;animation-delay:calc(var(--i)*.08s);transform:translateY(110%)}
+.lb-bar{width:180px;height:1px;background:rgba(92,88,80,.15);position:relative;overflow:hidden}
+.lb-bar::after{content:'';position:absolute;inset:0;background:var(--accent);animation:barFill 1.2s var(--ease) forwards}
+@keyframes barFill{from{transform:scaleX(0);transform-origin:left}to{transform:scaleX(1);transform-origin:left}}
+@keyframes slideUp{to{transform:translateY(0)}}
+
+/* ── Nav ── */
+nav{position:fixed;inset:0 0 auto 0;z-index:1000;padding:2rem 5rem;display:flex;align-items:center;justify-content:space-between;transition:padding .5s var(--ease),background .5s var(--ease)}
+nav.scrolled{padding:1rem 5rem;background:rgba(237,234,229,.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:.12em;color:var(--text);text-decoration:none;cursor:none}
+.nav-logo em{color:var(--accent);font-style:normal}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;transition:color .3s;cursor:none;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a:hover::after{width:100%}
+.nav-toggle{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:none;z-index:1001}
+.nav-toggle span{display:block;width:26px;height:1px;background:var(--text);transition:.35s}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ── Scroll progress ── */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:10001;transition:width .05s linear}
+
+/* ── Hero ── */
+.hero{height:100vh;min-height:600px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5rem 7rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('Projects/AGORA Resturante-Grand Egyption meusem/Main photo/2414_ACR_ID_REN_DD_1002_00.jpg');background-size:cover;background-position:center;filter:saturate(.75);animation:kenburns 18s var(--ease) forwards}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(237,234,229,.82) 0%,rgba(237,234,229,.55) 100%)}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.06)}}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 65% 45%,rgba(92,88,80,.06) 0%,transparent 60%)}
+.hero-letter{position:absolute;top:50%;right:3rem;transform:translateY(-52%);font-family:'Cormorant Garamond',serif;font-size:clamp(14rem,28vw,26rem);font-weight:300;line-height:1;color:rgba(92,88,80,.05);pointer-events:none;user-select:none}
+.hero-tag{position:relative;z-index:1;font-size:.68rem;letter-spacing:.45em;text-transform:uppercase;color:var(--accent);margin-bottom:1.8rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s var(--ease) 1.8s forwards}
+.hero-title{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,9.5vw,10.5rem);font-weight:300;line-height:.92;margin-bottom:3rem}
+.hero-row{display:block;overflow:hidden}
+.hero-row span{display:block;opacity:0;transform:translateY(105%);animation:slideUpFade .9s var(--ease) forwards}
+.hero-row:nth-child(1) span{animation-delay:1.9s}
+.hero-row:nth-child(2) span{animation-delay:2.05s;color:var(--accent);font-style:italic}
+.hero-sub{position:relative;z-index:1;max-width:360px;font-size:.84rem;color:var(--muted);line-height:1.9;opacity:0;animation:fadeUp .8s var(--ease) 2.3s forwards}
+.hero-scroll{position:absolute;right:5rem;bottom:3.5rem;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.2rem;opacity:0;animation:fadeUp .8s var(--ease) 2.5s forwards}
+.hero-scroll span{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+.scroll-line{width:1px;height:55px;background:linear-gradient(to bottom,transparent,var(--accent));animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes slideUpFade{to{opacity:1;transform:translateY(0)}}
+
+/* ── Stats bar ── */
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat{padding:2.5rem 3rem;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--accent);line-height:1}
+.stat-l{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+
+/* ── Common ── */
+.sec{padding:8rem 5rem}
+section[id]{scroll-margin-top:90px}
+.tag{display:inline-flex;align-items:center;gap:1rem;font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);margin-bottom:1.6rem}
+.tag::before{content:'';width:28px;height:1px;background:var(--accent)}
+.h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,5.5rem);font-weight:300;line-height:1.05;margin-bottom:4rem}
+.rv{opacity:0;transform:translateY(38px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.rv.in{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.42s}
+
+/* ── Projects Grid ── */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pcard{position:relative;overflow:hidden;cursor:none;background:var(--bg3);aspect-ratio:4/3}
+.pcard img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:transform .85s var(--ease),opacity .6s var(--ease)}
+.pcard img.loaded,.tab-img img.loaded{opacity:1}
+.pcard:hover img{transform:scale(1.06)}
+.country-divider{margin:3.5rem 0 1.8rem;display:flex;align-items:center;gap:1.5rem}
+.country-divider-line{flex:1;height:1px;background:var(--border)}
+.country-divider-label{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.pcard-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,18,8,.88) 0%,rgba(30,18,8,.1) 55%,transparent 100%);opacity:0;transition:opacity .5s var(--ease);display:flex;flex-direction:column;justify-content:flex-end;padding:2rem}
+.pcard:hover .pcard-ov{opacity:1}
+.pcard-n{font-family:'Cormorant Garamond',serif;font-size:.7rem;color:var(--accent2);letter-spacing:.25em;margin-bottom:.4rem}
+.pcard-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,2vw,1.9rem);font-weight:400;color:#edeae5;line-height:1.2}
+.pcard-sub{font-size:.65rem;color:rgba(237,234,229,.55);margin-top:.2rem;letter-spacing:.05em}
+.pcard-cat{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(237,234,229,.5);margin-top:.5rem}
+.pcard-arrow{position:absolute;top:1.2rem;right:1.2rem;width:38px;height:38px;border:1px solid rgba(237,234,229,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(-8px);transition:opacity .3s,transform .3s}
+.pcard:hover .pcard-arrow{opacity:1;transform:translateY(0)}
+.pcard-arrow svg{width:14px;height:14px;stroke:#edeae5;fill:none;stroke-width:1.5}
+.pcard-feature{grid-column:1/-1;aspect-ratio:21/8;min-height:320px}
+.pcard-feature .pcard-title{font-size:clamp(1.8rem,3.2vw,2.8rem)}
+
+/* ── Section divider ── */
+.sec-divider{display:flex;align-items:center;gap:2rem;padding:0 5rem;margin-bottom:3rem}
+.sec-divider-line{flex:1;height:1px;background:var(--border)}
+.sec-divider-text{font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+
+/* ── Competitions grid (2 cols) ── */
+.cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cgrid .pcard{height:480px}
+
+/* ── Graduation ── */
+.grad-wrap{position:relative;height:60vh;min-height:400px;overflow:hidden}
+.grad-wrap img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.2)}
+.grad-info{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,18,8,.85) 0%,transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 5rem}
+.grad-tag{font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--accent2);margin-bottom:1rem}
+.grad-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,4rem);font-weight:300;color:#edeae5;line-height:1.1}
+
+/* ── About ── */
+.about-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:7rem;align-items:center}
+.about-text{font-size:.88rem;color:var(--muted);line-height:2;margin:2rem 0}
+.about-text strong{color:var(--text);font-weight:400}
+.btn-outline{display:inline-flex;align-items:center;gap:1rem;margin-top:2rem;padding:1rem 2.5rem;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s;cursor:none}
+.btn-outline:hover{background:var(--accent);color:var(--bg)}
+.btn-outline svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+
+/* ── Experience timeline ── */
+.tl{position:relative;margin-left:1rem;padding-left:3rem;border-left:1px solid var(--border)}
+.tl-item{position:relative;padding-bottom:3.5rem}
+.tl-item:last-of-type{padding-bottom:2rem}
+.tl-item::before{content:'';position:absolute;left:calc(-3rem - 4px);top:.5rem;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--bg2)}
+.tl-period{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.tl-role{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:300;line-height:1.15}
+.tl-company{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
+.tl-desc{font-size:.86rem;color:var(--muted);line-height:1.95;margin-top:1rem;max-width:720px}
+.tl-chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.2rem}
+.tl-chip{font-size:.62rem;letter-spacing:.1em;color:var(--text);padding:.35rem .8rem;border:1px solid var(--border);border-radius:20px;background:var(--bg)}
+.tl-edu{margin-top:1rem;padding-top:2.5rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.2rem}
+.tl-edu-label{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+.tl-edu-text{font-size:.9rem;color:var(--text)}
+.tl-edu-text em{font-style:italic;color:var(--muted)}
+
+/* ── Contact ── */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start}
+.clinks{display:flex;flex-direction:column;gap:1.4rem;margin-top:2rem}
+.clink{display:flex;align-items:center;gap:1.5rem;color:var(--muted);text-decoration:none;font-size:.84rem;padding-bottom:1.4rem;border-bottom:1px solid var(--border);transition:color .3s;cursor:none}
+.clink:hover{color:var(--accent)}
+.clink-icon{width:40px;height:40px;flex-shrink:0;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:border-color .3s,background .3s}
+.clink:hover .clink-icon{border-color:var(--accent);background:rgba(92,88,80,.08)}
+.clink-icon svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
+.cform{display:flex;flex-direction:column;gap:1.8rem}
+.fg{position:relative}
+.fg input,.fg textarea{width:100%;background:transparent;border:none;border-bottom:1px solid var(--border);color:var(--text);font-family:'Inter',sans-serif;font-size:.84rem;padding:1rem 0;outline:none;transition:border-color .3s}
+.fg input:focus,.fg textarea:focus{border-bottom-color:var(--accent)}
+.fg textarea{resize:none;height:110px}
+.fg label{position:absolute;top:1rem;left:0;pointer-events:none;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);transition:.3s}
+.fg input:focus+label,.fg input:not(:placeholder-shown)+label,.fg textarea:focus+label,.fg textarea:not(:placeholder-shown)+label{top:-.5rem;font-size:.58rem;color:var(--accent)}
+.btn-send{align-self:flex-start;background:var(--accent);color:var(--bg);border:none;padding:1.1rem 3rem;font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;cursor:none;transition:background .3s}
+.btn-send:hover{background:var(--accent2)}
+
+/* ── Footer ── */
+footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted)}
+.f-copy{font-size:.68rem;color:var(--muted);letter-spacing:.1em}
+.f-social{display:flex;gap:2rem}
+.f-social a{color:var(--muted);text-decoration:none;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;transition:color .3s;cursor:none}
+.f-social a:hover{color:var(--accent)}
+
+/* ══ PROJECT MODAL ══ */
+#modal{position:fixed;inset:0;z-index:9500;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s var(--ease)}
+#modal.show{opacity:1;visibility:visible}
+#modal-bg{position:absolute;inset:0;background:rgba(237,234,229,.97)}
+#modal-inner{position:relative;z-index:1;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+#modal-header{padding:1.5rem 5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);flex-shrink:0}
+#modal-title-wrap{}
+#modal-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;line-height:1}
+#modal-subtitle{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:.3rem}
+#modal-close{width:44px;height:44px;border:1px solid var(--border);border-radius:50%;background:none;cursor:none;display:flex;align-items:center;justify-content:center;transition:border-color .3s,background .3s}
+#modal-close:hover{border-color:var(--accent);background:rgba(92,88,80,.08)}
+#modal-close svg{width:14px;height:14px;stroke:var(--text);fill:none;stroke-width:1.5}
+#modal-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);flex-shrink:0;padding:0 5rem}
+.mtab{background:none;border:none;cursor:none;font-family:'Inter',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:1rem 0;margin-right:2.5rem;position:relative;transition:color .3s}
+.mtab::after{content:'';position:absolute;bottom:-1px;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}
+.mtab.active,.mtab:hover{color:var(--accent)}
+.mtab.active::after,.mtab:hover::after{width:100%}
+#modal-body{flex:1;overflow-y:auto;padding:3rem 5rem}
+.tab-panel{display:none;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.tab-panel.active{display:grid}
+.tab-img{aspect-ratio:4/3;overflow:hidden;cursor:none}
+.tab-img img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:transform .7s var(--ease),opacity .6s var(--ease)}
+.tab-img:hover img{transform:scale(1.05)}
+.tab-img.wide{grid-column:span 2}
+.tab-pdf{display:flex;align-items:center;gap:1.5rem;padding:2rem;border:1px solid var(--border);text-decoration:none;color:var(--text);transition:border-color .3s,background .3s}
+.tab-pdf:hover{border-color:var(--accent);background:rgba(92,88,80,.05)}
+.tab-pdf svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.2;flex-shrink:0}
+.tab-pdf-info{}
+.tab-pdf-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem}
+.tab-pdf-size{font-size:.68rem;color:var(--muted);letter-spacing:.1em;margin-top:.3rem}
+
+/* ── Lightbox (for clicking individual images in modal) ── */
+#mlb{position:fixed;inset:0;background:rgba(30,18,8,.97);z-index:9600;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s}
+#mlb.show{opacity:1;visibility:visible}
+#mlb img{max-width:92vw;max-height:90vh;object-fit:contain;display:block;transition:opacity .2s}
+#mlb img.fade{opacity:0}
+#mlb-close{position:fixed;top:1.5rem;right:1.5rem;width:44px;height:44px;border:1px solid rgba(237,234,229,.25);border-radius:50%;background:none;cursor:none;display:flex;align-items:center;justify-content:center}
+#mlb-close svg{width:14px;height:14px;stroke:#edeae5;fill:none;stroke-width:1.5}
+.mlb-nav{position:fixed;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid rgba(237,234,229,.25);border-radius:50%;background:none;cursor:none;display:flex;align-items:center;justify-content:center}
+#mlb-prev{left:1.5rem}
+#mlb-next{right:1.5rem}
+.mlb-nav svg{width:14px;height:14px;stroke:#edeae5;fill:none;stroke-width:1.5}
+#mlb-cnt{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(237,234,229,.5)}
+#mlb-cnt em{color:#edeae5;font-style:normal}
+
+/* ── No-cover placeholder ── */
+.pcard-noimg{width:100%;height:100%;background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);display:flex;align-items:center;justify-content:center;padding:2rem;position:absolute;inset:0}
+.pcard-noimg-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2.2rem);font-weight:300;color:var(--bg);text-align:center;line-height:1.3;letter-spacing:.08em}
+
+/* ── Design-only badge ── */
+.pcard-badge{position:absolute;top:.9rem;left:.9rem;font-size:.53rem;letter-spacing:.22em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:.28rem .65rem;border-radius:20px;z-index:3;pointer-events:none}
+
+/* ── Project area badge on card ── */
+.pcard-area{display:inline-block;margin-top:.6rem;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(237,234,229,.65);padding:.25rem .65rem;border:1px solid rgba(237,234,229,.25);border-radius:20px}
+
+/* ── Modal specs strip ── */
+#modal-specs{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.7rem}
+.spec-chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:.3rem .8rem;border:1px solid var(--border);border-radius:20px}
+.spec-chip strong{color:var(--accent);font-weight:400}
+
+/* ── Responsive ── */
+@media(max-width:1000px){
+  nav{padding:1.5rem 2rem}
+  nav.scrolled{padding:1rem 2rem}
+  .nav-links{display:none;position:fixed;top:0;right:0;bottom:0;width:270px;background:var(--bg2);border-left:1px solid var(--border);flex-direction:column;justify-content:center;padding:3rem 2.5rem;gap:2.2rem}
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:.9rem}
+  .nav-toggle{display:flex}
+  .hero{padding:0 2rem 5rem}
+  .hero-letter{font-size:9rem;right:1rem}
+  .sec{padding:5rem 2rem}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:none;border-bottom:1px solid var(--border)}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .cgrid{grid-template-columns:1fr}
+  .cgrid .pcard{height:320px}
+  .about-wrap{grid-template-columns:1fr;gap:4rem}
+  .contact-wrap{grid-template-columns:1fr;gap:4rem}
+  footer{padding:2rem;flex-direction:column;text-align:center}
+  .sec-divider{padding:0 2rem}
+  .grad-info{padding:3rem 2rem}
+  #modal-header{padding:1.2rem 1.5rem}
+  #modal-tabs{padding:0 1.5rem}
+  #modal-body{padding:2rem 1.5rem}
+  .tab-panel{grid-template-columns:1fr 1fr}
+  #cur,#cur2{display:none}
+  body{cursor:auto}
+  a,button{cursor:pointer}
+}
+@media(max-width:1000px){
+  .pcard-feature{aspect-ratio:auto;min-height:auto}
+  .tl{margin-left:.3rem;padding-left:2rem}
+  .tl-item::before{left:calc(-2rem - 4px)}
+}
+@media(max-width:480px){
+  .pgrid{grid-template-columns:1fr}
+  .tab-panel{grid-template-columns:1fr}
+  .tab-img.wide{grid-column:span 1}
+  .stats-bar{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-bg{animation:none}
+  .ll span{animation:none;transform:none}
+  .lb-bar::after{animation:none;transform:scaleX(1)}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="cur"></div>
+<div id="cur2"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="ll" id="ll"></div>
+  <div class="lb-bar"></div>
+</div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">SB<em>.</em></a>
+  <ul class="nav-links" id="nl">
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+    <li><a href="#competitions" onclick="closeMenu()">Competitions</a></li>
+    <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Hero -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-letter">S</div>
+  <p class="hero-tag">Senior Technical Office Architect</p>
+  <h1 class="hero-title">
+    <span class="hero-row"><span>Samira</span></span>
+    <span class="hero-row"><span>Belal</span></span>
+  </h1>
+  <p class="hero-sub">Crafting precise technical documentation and transforming design visions into buildable, beautiful realities.</p>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- Stats -->
+<div class="stats-bar">
+  <div class="stat rv"><div class="stat-n">20+</div><div class="stat-l">Projects</div></div>
+  <div class="stat rv d1"><div class="stat-n">3+</div><div class="stat-l">Years Experience</div></div>
+  <div class="stat rv d2"><div class="stat-n">EG&nbsp;/&nbsp;KSA</div><div class="stat-l">Markets</div></div>
+  <div class="stat rv d3"><div class="stat-n">3,100 m²</div><div class="stat-l">Largest Fit-Out</div></div>
+</div>
+
+<!-- Projects -->
+<section class="sec" id="projects" style="background:var(--bg2);">
+  <div class="tag rv">01 — Portfolio</div>
+  <h2 class="h2 rv d1">Selected <em>Works</em></h2>
+
+  <div class="country-divider rv">
+    <div class="country-divider-line"></div>
+    <div class="country-divider-label">Egypt</div>
+    <div class="country-divider-line"></div>
+  </div>
+  <div class="pgrid" id="pgrid-eg"></div>
+
+  <div class="country-divider rv">
+    <div class="country-divider-line"></div>
+    <div class="country-divider-label">Saudi Arabia</div>
+    <div class="country-divider-line"></div>
+  </div>
+  <div class="pgrid" id="pgrid-ksa"></div>
+
+  <div class="country-divider rv">
+    <div class="country-divider-line"></div>
+    <div class="country-divider-label">UAE</div>
+    <div class="country-divider-line"></div>
+  </div>
+  <div class="pgrid" id="pgrid-uae"></div>
+</section>
+
+<!-- Competitions -->
+<div class="sec-divider rv"><div class="sec-divider-line"></div><div class="sec-divider-text">Competitions</div><div class="sec-divider-line"></div></div>
+<section id="competitions" style="padding:0 5rem 8rem;">
+  <div class="tag rv">02 — Design Competitions</div>
+  <h2 class="h2 rv d1" style="margin-bottom:2rem">Competition <em>Entries</em></h2>
+  <div class="cgrid" id="cgrid"></div>
+</section>
+
+<!-- Graduation -->
+<section id="graduation" style="padding:0 5rem 8rem;">
+  <div class="tag rv">03 — Graduation Project</div>
+  <div class="grad-wrap rv d1" onclick="openModal(200)" style="cursor:none">
+    <img src="Graduation project/Main Photo/night lay.jpg" alt="Graduation Project" loading="lazy">
+    <div class="grad-info">
+      <div class="grad-tag">Faculty of Architecture — Future University in Egypt</div>
+      <div class="grad-title">Graduation Project</div>
+      <div style="margin-top:1rem;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(237,234,229,.5)">Click to view posters</div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="sec" id="about" style="background:var(--bg2);">
+  <div class="about-wrap">
+    <div class="rv">
+      <div class="tag">04 — About</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,5rem);font-weight:300;line-height:1.05;">Precision in <em>every</em><br>detail</h2>
+      <p class="about-text">
+        I'm <strong>Samira Belal</strong>, a Senior Technical Office Architect with a passion for bridging the gap between creative design and precise technical execution. From concept design packages to detailed shop drawings, I ensure every project is documented to the highest standard.
+        <br><br>
+        My work spans <strong>residential, commercial</strong>, and <strong>hospitality</strong> projects across Egypt and Saudi Arabia — always with an eye for detail and a commitment to quality.
+      </p>
+      <a href="#contact" class="btn-outline">Start a Project <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="rv d2">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)">
+        <div style="padding:2.5rem;background:var(--bg)">
+          <div style="font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem">Specialties</div>
+          <div style="font-size:.84rem;color:var(--text);line-height:2">Shop Drawings<br>Interior Design<br>3D Visualization<br>Space Planning<br>FF&amp;E Selection</div>
+        </div>
+        <div style="padding:2.5rem;background:var(--bg)">
+          <div style="font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem">Software</div>
+          <div style="font-size:.84rem;color:var(--text);line-height:2">AutoCAD<br>Revit<br>3ds Max<br>V-Ray<br>Adobe Suite</div>
+        </div>
+        <div style="padding:2.5rem;background:var(--bg);grid-column:span 2">
+          <div style="font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem">Markets</div>
+          <div style="font-size:.84rem;color:var(--text);line-height:2">Egypt &nbsp;·&nbsp; Saudi Arabia (KSA) &nbsp;·&nbsp; UAE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="sec" id="experience">
+  <div class="tag rv">05 — Experience</div>
+  <h2 class="h2 rv d1" style="margin-bottom:3rem">Professional <em>Journey</em></h2>
+  <div class="tl rv d2">
+    <div class="tl-item">
+      <div class="tl-period">Oct 2023 — Present</div>
+      <div class="tl-role">Senior Technical Office Architect</div>
+      <div class="tl-company">Sigma Contractors</div>
+      <p class="tl-desc">Leading the technical office for interior fit-out and retail projects across Egypt and Saudi Arabia — shop drawings, QS and cost control, payment certification, and client/consultant coordination including the Grand Egyptian Museum.</p>
+      <div class="tl-chips">
+        <span class="tl-chip">AGORA — Grand Egyptian Museum (Overarc Studio)</span>
+        <span class="tl-chip">Property Finder HQ, District 5</span>
+        <span class="tl-chip">OKHTEIN, Kingdom Tower KSA (WZ Architects)</span>
+        <span class="tl-chip">EXTRA, Granada Mall KSA</span>
+        <span class="tl-chip">ECOLAB HQ, CFC</span>
+        <span class="tl-chip">KODE Club, Swan Lake</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-period">Nov 2022 — Sep 2023</div>
+      <div class="tl-role">Interior Design &amp; Technical Office Architect</div>
+      <div class="tl-company">FineTouch Contractors</div>
+      <p class="tl-desc">Delivered design and execution drawings across corporate and hospitality fit-outs.</p>
+      <div class="tl-chips">
+        <span class="tl-chip">ENZA HQ</span>
+        <span class="tl-chip">PATCHI HQ, SODIC</span>
+        <span class="tl-chip">KOKOMO Restaurant, District 5</span>
+        <span class="tl-chip">Majid Al Futtaim Office</span>
+        <span class="tl-chip">Etapa Square</span>
+      </div>
+    </div>
+  </div>
+  <div class="tl-edu rv d3">
+    <span class="tl-edu-label">Education</span>
+    <span class="tl-edu-text">BSc Architectural Engineering, Future University in Egypt — <em>GPA 3.70/4.00 (Grade A, Graduation Project A)</em></span>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="sec" id="contact">
+  <div class="contact-wrap">
+    <div>
+      <div class="tag rv">06 — Get In Touch</div>
+      <h2 class="h2 rv d1" style="margin-bottom:1rem">Let's Create<br><em>Together</em></h2>
+      <p class="rv d2" style="font-size:.88rem;color:var(--muted);line-height:2;margin-bottom:0">Have a project in mind? Let's discuss how to bring it to life.</p>
+      <div class="clinks rv d3">
+        <a href="mailto:samira_belal@yahoo.com" class="clink">
+          <div class="clink-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          samira_belal@yahoo.com
+        </a>
+        <a href="tel:+201011466659" class="clink">
+          <div class="clink-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.49 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          +20 101 146 6659
+        </a>
+        <a href="https://www.linkedin.com/in/samira-belal" target="_blank" rel="noopener" class="clink">
+          <div class="clink-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          linkedin.com/in/samira-belal
+        </a>
+      </div>
+    </div>
+    <form class="cform rv d2" id="cform">
+      <div class="fg"><input type="text" id="fn" placeholder=" " required><label for="fn">Your Name</label></div>
+      <div class="fg"><input type="email" id="fe" placeholder=" " required><label for="fe">Email Address</label></div>
+      <div class="fg"><input type="text" id="fs" placeholder=" "><label for="fs">Subject</label></div>
+      <div class="fg"><textarea id="fm" placeholder=" " required></textarea><label for="fm">Your Message</label></div>
+      <button type="submit" class="btn-send" id="sbtn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="f-logo">Samira Belal</div>
+  <div class="f-copy">© 2026 Samira Belal. All rights reserved.</div>
+  <div class="f-social">
+    <a href="https://www.linkedin.com/in/samira-belal" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- Project Modal -->
+<div id="modal">
+  <div id="modal-bg"></div>
+  <div id="modal-inner">
+    <div id="modal-header">
+      <div id="modal-title-wrap">
+        <div id="modal-title"></div>
+        <div id="modal-subtitle"></div>
+      </div>
+      <button id="modal-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div id="modal-tabs"></div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Image lightbox -->
+<div id="mlb">
+  <button id="mlb-close"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <button class="mlb-nav" id="mlb-prev"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <button class="mlb-nav" id="mlb-next"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+  <img id="mlb-img" src="" alt="">
+  <div id="mlb-cnt"><em id="mlb-cur">1</em> / <span id="mlb-tot">1</span></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════════════
+const projects = [
+  {
+    id:1, title:'AGORA Restaurant', subtitle:'Grand Egyptian Museum', type:'Hospitality', cat:'commercial',
+    area:'750 m²', areaNum:750, year:'2026', location:'Giza, Egypt', scope:'Hospitality Interior', country:'Egypt', priority:3,
+    cover:'Projects/AGORA Resturante-Grand Egyption meusem/Main photo/2414_ACR_ID_REN_DD_1002_00.jpg',
+    tabs:{
+      'Sample Boards':[
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.20 AM.jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.21 AM.jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.21 AM (1).jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.21 AM (2).jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.22 AM.jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.22 AM (1).jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.22 AM (2).jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.32.22 AM (3).jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.33.04 AM.jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.33.04 AM (1).jpeg',
+        'Projects/AGORA Resturante-Grand Egyption meusem/Sample boards/WhatsApp Image 2026-04-27 at 1.33.04 AM (2).jpeg'
+      ],
+      'Technical Drawing':[{pdf:'Projects/AGORA Resturante-Grand Egyption meusem/Tecnichal Drawing/05.100.AGORA-GEM-A-shop Drawing plans 22.09.2025-SB-00.pdf',name:'Shop Drawing Plans — AGORA GEM',size:'31 MB'}]
+    }
+  },
+  {
+    id:2, title:'Apartment', subtitle:'New Cairo', type:'Residential', cat:'residential',
+    area:'180 m²', areaNum:180, year:'2024', location:'New Cairo, Egypt', scope:'Residential Interior', country:'Egypt', designOnly:true,
+    cover:'Projects/Apartment-New cairo/Main Photo/L3D121S14ENDP6P4UBQUWFCPWLUF3P3XA888_1600x1200.jpg',
+    tabs:{
+      '3D Design':[
+        'Projects/Apartment-New cairo/3D Design/L3D121S14ENDP6P4UBQUWFCPWLUF3P3XA888_1600x1200.jpg',
+        'Projects/Apartment-New cairo/3D Design/L3D121S14ENDP6P5DCQUWFCPWLUF3P3XA888_1600x1200.jpg',
+        'Projects/Apartment-New cairo/3D Design/L3D121S14ENDP6P5EUYUWFDRMLUF3P3X4888_1600x1200.jpg',
+        'Projects/Apartment-New cairo/3D Design/L3D121S14ENDP6P5GBIUWFWCMLUF3P3X2888_1600x1200.jpg',
+        'Projects/Apartment-New cairo/3D Design/L3D171S14ENDP6P4JJAUWFWCOLUF3P3XQ888_1600x1200.jpg'
+      ]
+    }
+  },
+  {
+    id:3, title:'Apartment', subtitle:'Dubai', type:'Residential', cat:'residential',
+    area:'220 m²', areaNum:220, year:'2024', location:'Dubai, UAE', scope:'Residential Interior', country:'UAE', designOnly:true,
+    cover:'Projects/Apatrtment-dubai/Main photo/6.jpg',
+    tabs:{
+      '3D Design':[
+        'Projects/Apatrtment-dubai/3D Desgin/1.jpg','Projects/Apatrtment-dubai/3D Desgin/2.jpg',
+        'Projects/Apatrtment-dubai/3D Desgin/3.jpg','Projects/Apatrtment-dubai/3D Desgin/4.jpg',
+        'Projects/Apatrtment-dubai/3D Desgin/5.jpg','Projects/Apatrtment-dubai/3D Desgin/6.jpg',
+        'Projects/Apatrtment-dubai/3D Desgin/7.jpg','Projects/Apatrtment-dubai/3D Desgin/8.jpg',
+        'Projects/Apatrtment-dubai/3D Desgin/9.jpg','Projects/Apatrtment-dubai/3D Desgin/10.jpg',
+        'Projects/Apatrtment-dubai/3D Desgin/11.jpg','Projects/Apatrtment-dubai/3D Desgin/12.jpg'
+      ]
+    }
+  },
+  {
+    id:4, title:'ECOLAB Offices', subtitle:'Cairo Festival City', type:'Commercial', cat:'commercial',
+    area:'1,000 m²', areaNum:1000, year:'2024', location:'Cairo Festival City, Egypt', scope:'Office Interior', country:'Egypt', priority:2,
+    cover:'Projects/ECOLAB-CFC/Main photo/46c2ac52-d46c-47e0-96e1-b9f168b850c8.jpg',
+    tabs:{
+      'Site Photos':[
+        'Projects/ECOLAB-CFC/Site Photo After constraction/070d1c3c-c91b-46da-a661-9163501119ed.jpg',
+        'Projects/ECOLAB-CFC/Site Photo After constraction/2f53da1c-7fb2-484c-91da-d010024def72.jpg',
+        'Projects/ECOLAB-CFC/Site Photo After constraction/46c2ac52-d46c-47e0-96e1-b9f168b850c8.jpg',
+        'Projects/ECOLAB-CFC/Site Photo After constraction/4ab1cecd-33ac-4212-bc5f-2a1c244e1ef6.jpg',
+        'Projects/ECOLAB-CFC/Site Photo After constraction/6ccb00d1-b489-45f6-9a2d-925fd7a161f6.jpg',
+        'Projects/ECOLAB-CFC/Site Photo After constraction/9d473275-438f-4054-b16d-740d7c1007b5.jpg',
+        'Projects/ECOLAB-CFC/Site Photo After constraction/b0f5d305-bc96-4cbf-bcd7-d5c8b24b1088.jpg'
+      ],
+      'Sample Boards':[
+        'Projects/ECOLAB-CFC/Sample boards/661cf4a7-5df4-4ee0-b845-4bc6539ff685.jpg',
+        'Projects/ECOLAB-CFC/Sample boards/c3a1c8d9-dce8-40da-aa34-54def5a4b383.jpg'
+      ],
+      'Technical Drawing':[{pdf:'Projects/ECOLAB-CFC/Tecnichal Drawing/100 . ECO LAB Offices-CFC-A-ADP -SB-Rev.02.pdf',name:'Architectural Design Package',size:'44 MB'}]
+    }
+  },
+  {
+    id:5, title:'ENZA Showroom', subtitle:'Alabasy, Egypt', type:'Commercial', cat:'commercial',
+    area:'140 m²', areaNum:140, year:'2024', location:'SODIC East Town, Egypt', scope:'Retail Showroom', country:'Egypt',
+    cover:'Projects/ENZA/3D Design/1www.jpg',
+    tabs:{
+      '3D Design':[
+        'Projects/ENZA/3D Design/1www.jpg','Projects/ENZA/3D Design/2ww.jpg',
+        'Projects/ENZA/3D Design/3ww.jpg','Projects/ENZA/3D Design/4www.jpg',
+        'Projects/ENZA/3D Design/5ww.jpg','Projects/ENZA/3D Design/6www.jpg',
+        'Projects/ENZA/3D Design/7www.jpg','Projects/ENZA/3D Design/8ww.jpg',
+        'Projects/ENZA/3D Design/9www.jpg'
+      ],
+      'Site Photos':[
+        'Projects/ENZA/Site Photo After constraction/492a265a-57ea-4409-be6f-9c378f3df99f.jpg',
+        'Projects/ENZA/Site Photo After constraction/6bf191f8-8ea9-4ed9-81e2-d7cebf9815a0.jpg',
+        'Projects/ENZA/Site Photo After constraction/6cb7182d-d703-4e35-a48f-e2fad9275f1d.jpg'
+      ],
+      'Technical Drawing':[{pdf:'Projects/ENZA/Tecnichal Drawing/100.Enza-EDNC-A-IH-SB-03.pdf',name:'Interior Hard Drawings',size:'13 MB'}]
+    }
+  },
+  {
+    id:6, title:'EXTRA', subtitle:'KSA', type:'Commercial — KSA', cat:'commercial',
+    area:'2,500 m²', areaNum:2500, year:'2025', location:'Saudi Arabia', scope:'Retail Fit-Out', country:'KSA',
+    cover:'Projects/EXTRA-KSA/Main photo/1.png',
+    tabs:{
+      'Technical Drawing':[{pdf:'Projects/EXTRA-KSA/Tecnichal Drawing/Sigma-Extra-KSA-A-Technical Drawing -SB-01(27.11.2025).pdf',name:'Technical Drawing Package — Extra KSA',size:'17 MB'}]
+    }
+  },
+  {
+    id:7, title:'GURU Open Air Mall', subtitle:'Egypt', type:'Commercial', cat:'commercial',
+    area:'150 m²', areaNum:150, year:'2025', location:'Egypt', scope:'Open Air Commercial', country:'Egypt',
+    cover:'Projects/GURU-Open Air Mall/Main photo/9f190d5e-7877-4d0e-80e8-2cb72ac8bb3a.jpg',
+    tabs:{
+      'Technical Drawing':[{pdf:'Projects/GURU-Open Air Mall/Design Drawing/05.GURU-OAM-Concept Design package-SB-OA-04.pdf',name:'Concept Design Package',size:'3.5 MB'}]
+    }
+  },
+  {
+    id:8, title:'KAPCI Paint Showroom', subtitle:'Alabasy', type:'Commercial', cat:'commercial',
+    area:'200 m²', areaNum:200, year:'2024', location:'New Cairo, Egypt', scope:'Paint Showroom', country:'Egypt', designOnly:true,
+    cover:'Projects/Kabci -Alabasy/3D Design/1.jpg',
+    tabs:{
+      '3D Design':[
+        'Projects/Kabci -Alabasy/3D Design/1.jpg','Projects/Kabci -Alabasy/3D Design/6.jpg',
+        'Projects/Kabci -Alabasy/3D Design/7.jpg','Projects/Kabci -Alabasy/3D Design/9.jpg',
+        'Projects/Kabci -Alabasy/3D Design/10.jpg'
+      ]
+    }
+  },
+  {
+    id:9, title:'Orabi Group', subtitle:'New Loutas House', type:'Residential', cat:'residential',
+    area:'500 m²', areaNum:500, year:'2024', location:'New Loutas, Egypt', scope:'Residential Villa', country:'Egypt', designOnly:true,
+    cover:'Projects/Orabi group_New loutas house/Main Photo/5.jpg',
+    tabs:{
+      '3D Design':[
+        'Projects/Orabi group_New loutas house/3D Design/RECEPTION/1.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/RECEPTION/2.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/RECEPTION/3.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/RECEPTION/5.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/Living room/133.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/Living room/233.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/Living room/333.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/master bed/1.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/master bed/3.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/master bed/5.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/Kids bed room/144.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/Kids bed room/344.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/toilet/1m.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/toilet/2m.jpg',
+        'Projects/Orabi group_New loutas house/3D Design/Laundry/1-.jpg'
+      ]
+    }
+  },
+  {
+    id:10, title:'Property Finder', subtitle:'District 5, Marakez', type:'Commercial', cat:'commercial',
+    area:'1,500 m²', areaNum:1500, year:'2024', location:'Marakez D5, Egypt', scope:'Office Interior', country:'Egypt', priority:1,
+    cover:'Projects/Property finder -District 5 Marakez/Main photo/5b40364e-a678-434c-bd40-651dc9f9d882.jpg',
+    tabs:{
+      'Site Photos':[
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/0114a96e-4c9f-4e48-b68e-5b4ecbd2a50a.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/54d1889f-6529-41b3-8530-554cd2ab8a0d.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/5b40364e-a678-434c-bd40-651dc9f9d882.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/5ca446b1-8c07-4fa3-8583-57b93481f8e5.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/956bd9ad-91d6-4c23-853e-e5309c5017ca.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/ebcfb669-04b8-421e-987f-bfa4957c17c4.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/f186b278-bb55-4de8-9da4-e2c26422cb6e.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/f70a35a4-3871-4cd4-a7c9-e46c1ec38dc0.jpg',
+        'Projects/Property finder -District 5 Marakez/Site Photo After constraction/fbba4b56-f9ce-456a-bd22-cbdd807c64bb.jpg'
+      ],
+      'Sample Board':[
+        'Projects/Property finder -District 5 Marakez/Sample Board/34b322ae-ac40-490d-b7bd-50c6436f8c7c.jpg',
+        'Projects/Property finder -District 5 Marakez/Sample Board/67ea6788-54b9-45fe-ae7a-3481781c20ae.jpg',
+        'Projects/Property finder -District 5 Marakez/Sample Board/9e68edf8-0b26-4b19-96a2-c50fddac881b.jpg',
+        'Projects/Property finder -District 5 Marakez/Sample Board/a40c6cea-9c1c-466c-91dc-6227a4516207.jpg',
+        'Projects/Property finder -District 5 Marakez/Sample Board/dabc6072-4329-4b40-b994-03e4aeb0eb33.jpg',
+        'Projects/Property finder -District 5 Marakez/Sample Board/ef8bea15-b68d-4780-ba57-71858bdb2697.jpg'
+      ],
+      'Technical Drawing':[{pdf:'Projects/Property finder -District 5 Marakez/PF-D5/Property finder-D5-Tecnichal drawing-SB-00.pdf',name:'Technical Drawing Package',size:'15 MB'}]
+    }
+  },
+  {
+    id:11, title:'Villa', subtitle:'East Town', type:'Residential', cat:'residential',
+    area:'1,000 m²', areaNum:1000, year:'2025', location:'East Town, Egypt', scope:'Residential Villa', country:'Egypt', designOnly:true,
+    cover:'Projects/Villa-East town/Main photo/3.jpg',
+    tabs:{
+      '3D Design':[
+        'Projects/Villa-East town/3D Design/Master/Glossy/1.jpg',
+        'Projects/Villa-East town/3D Design/Master/Glossy/2.jpg',
+        'Projects/Villa-East town/3D Design/Master/Glossy/3.jpg',
+        'Projects/Villa-East town/3D Design/Master/Glossy/4.jpg',
+        'Projects/Villa-East town/3D Design/Master/Glossy/5.jpg',
+        'Projects/Villa-East town/3D Design/Master/Matt/1.jpg',
+        'Projects/Villa-East town/3D Design/Master/Matt/2.jpg',
+        'Projects/Villa-East town/3D Design/Master/Matt/3.jpg',
+        'Projects/Villa-East town/3D Design/Master/Matt/4.jpg',
+        'Projects/Villa-East town/3D Design/Guest pathroom option 1/1.jpg',
+        'Projects/Villa-East town/3D Design/Guest pathroom option 1/2.jpg',
+        'Projects/Villa-East town/3D Design/Guest pathroom option 1/3.jpg',
+        'Projects/Villa-East town/3D Design/Guest pathroom option 2/1.jpg',
+        'Projects/Villa-East town/3D Design/Guest pathroom option 2/2.jpg',
+        'Projects/Villa-East town/3D Design/Guest pathroom option 2/3.jpg'
+      ]
+    }
+  },
+  {
+    id:12, title:'Etapa Square', subtitle:'New Cairo', type:'Commercial', cat:'commercial',
+    area:'150 m²', areaNum:150, year:'2023', location:'New Cairo, Egypt', scope:'Commercial Interior', country:'Egypt',
+    cover:'Projects/Etapa Squar-New Cairo/Main Photo/29b8c0b2-ae49-47e0-a41e-a28cfb6d58fc.jpg',
+    tabs:{
+      'Technical Drawing':[{pdf:'Projects/Etapa Squar-New Cairo/Design Drawing/100.Etapa-A-IH-SB-Elevations-02 (2).pdf',name:'Interior Hard Drawing — Elevations',size:'3 MB'}]
+    }
+  },
+  {
+    id:13, title:'Kids Bedroom', subtitle:'Residential', type:'Residential', cat:'residential',
+    area:'25 m²', areaNum:25, year:'2024', location:'Egypt', scope:'Residential Design', country:'Egypt', designOnly:true,
+    cover:'Projects/Kids Bedroom/Main photo/1.png',
+    tabs:{
+      '3D Design':[
+        'Projects/Kids Bedroom/3D Design/1.png',
+        'Projects/Kids Bedroom/3D Design/1.webp',
+        'Projects/Kids Bedroom/3D Design/2.webp',
+        'Projects/Kids Bedroom/3D Design/3.webp',
+        'Projects/Kids Bedroom/3D Design/5.png'
+      ]
+    }
+  },
+  {
+    id:14, title:'Okhtein Store', subtitle:'Saudi Arabia', type:'Commercial — KSA', cat:'commercial',
+    area:'150 m²', areaNum:150, year:'2025', location:'Saudi Arabia', scope:'Retail Interior', country:'KSA',
+    cover:'Projects/OKT-KSA/Main photo/1.png',
+    tabs:{
+      'Technical Drawing':[{pdf:'Projects/OKT-KSA/Tecnichal Drawing/01.Okhtein-KSA-ATP-SB-05.pdf',name:'Technical Package — Okhtein KSA',size:'22 MB'}]
+    }
+  },
+  {
+    id:15, title:'KNANA', subtitle:'Interior Design', type:'Commercial', cat:'commercial',
+    area:'100 m²', areaNum:100, year:'2024', location:'Egypt', scope:'Interior Design', country:'Egypt', designOnly:true,
+    cover:'Projects/KNANA-LTM/Main photo/46963e53-e2ae-4641-9f22-8928953a943a.jpg',
+    tabs:{
+      '3D Design':[{pdf:'Projects/KNANA-LTM/3D Design/3D Design.pdf',name:'3D Design Presentation',size:'1.4 MB'}],
+      'Technical Drawing':[{pdf:'Projects/KNANA-LTM/Design Drawing/100.KN-LTM-A- FDS-SB-02.pdf',name:'Design Drawing Package',size:'9 MB'}]
+    }
+  },
+  {
+    id:16, title:'ME Office', subtitle:'Katameya Heights', type:'Commercial', cat:'commercial',
+    area:'1,000 m²', areaNum:1000, year:'2024', location:'Katameya Heights, Egypt', scope:'Office Interior', country:'Egypt', designOnly:true,
+    cover:'Projects/ME Office -KH/Main photo/Screenshot 2026-04-29 040446.png',
+    tabs:{
+      '3D Design':[{pdf:'Projects/ME Office -KH/3D Design/3D.pdf',name:'3D Design Presentation',size:'2.5 MB'}],
+      'Technical Drawing':[{pdf:'Projects/ME Office -KH/Design Drawing/100.ME-KH-ADP-G11 & G12 Combined-SB-02.pdf',name:'Architectural Design Package',size:'0.6 MB'}]
+    }
+  },
+  {
+    id:17, title:'Patchi Office', subtitle:'Cairo Festival City', type:'Commercial', cat:'commercial',
+    area:'600 m²', areaNum:600, year:'2024', location:'Cairo Festival City, Egypt', scope:'Retail Interior', country:'Egypt', designOnly:true,
+    cover:'Projects/Patchi Office -CFC/Main photo/Screenshot 2026-04-29 040607.png',
+    tabs:{
+      '3D Design':[{pdf:'Projects/Patchi Office -CFC/3D Design/103.1.Patchi-CFC-A-3D Views-SB-03.pdf',name:'3D Views Presentation',size:'3 MB'}],
+      'Technical Drawing':[{pdf:'Projects/Patchi Office -CFC/Design Drawing/100.Patchi-CFC-A-IH-SB-04.pdf',name:'Interior Hard Drawing',size:'4 MB'}]
+    }
+  },
+  {
+    id:18, title:'Town House', subtitle:'New Giza', type:'Residential', cat:'residential',
+    area:'1,000 m²', areaNum:1000, year:'2024', location:'New Giza, Egypt', scope:'Residential Design', country:'Egypt', designOnly:true,
+    cover:'Projects/Town House- New Giza/Main Photo/Screenshot 2026-04-29 040719.png',
+    tabs:{
+      'Technical Drawing':[{pdf:'Projects/Town House- New Giza/Design Drawing/Architectural Concept Package-HI-SB-03.pdf',name:'Architectural Concept Package',size:'2 MB'}]
+    }
+  }
+];
+
+const graduation = [
+  {
+    id:200, title:'Graduation Project', subtitle:'Faculty of Architecture — Future University in Egypt', type:'Graduation',
+    cover:'Graduation project/Main Photo/night lay.jpg',
+    tabs:{
+      'Posters':[
+        'Graduation project/Posters/poster-1.jpg',
+        'Graduation project/Posters/poster-2.jpg',
+        'Graduation project/Posters/poster-3.jpg',
+        'Graduation project/Posters/poster-4.jpg',
+        'Graduation project/Posters/poster-5.jpg',
+        'Graduation project/Posters/poster-6.jpg'
+      ]
+    }
+  }
+];
+
+const competitions = [
+  {
+    id:101, title:'Azbakya Kiosk', subtitle:'Design Competition', type:'Competition',
+    cover:'Competitions/Azbakya Kiosk/Main Photo/2.jpg',
+    tabs:{
+      '3D Design':[
+        'Competitions/Azbakya Kiosk/3D Design/1.jpg','Competitions/Azbakya Kiosk/3D Design/2.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/3.jpg','Competitions/Azbakya Kiosk/3D Design/4.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/5.jpg','Competitions/Azbakya Kiosk/3D Design/6.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/7.jpg','Competitions/Azbakya Kiosk/3D Design/8.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/9.jpg','Competitions/Azbakya Kiosk/3D Design/10.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/11.jpg','Competitions/Azbakya Kiosk/3D Design/12.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/13.jpg','Competitions/Azbakya Kiosk/3D Design/14.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/15.jpg','Competitions/Azbakya Kiosk/3D Design/16.jpg',
+        'Competitions/Azbakya Kiosk/3D Design/17.jpg'
+      ]
+    }
+  },
+  {
+    id:102, title:'Future University Booth', subtitle:'Exhibition Design', type:'Competition',
+    cover:'Competitions/Future university Booth/Main Photo/1.png',
+    tabs:{'Main Photo':['Competitions/Future university Booth/Main Photo/1.png']}
+  }
+];
+
+// ═══════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════
+function renderGrid(data, containerId){
+  const el = document.getElementById(containerId);
+  const feature = containerId==='pgrid-eg';
+  el.innerHTML = data.map((p,i)=>`
+    <div class="pcard rv${feature&&i===0?' pcard-feature':''}" style="transition-delay:${(i%3)*.1}s" onclick="openModal(${p.id})">
+      ${p.noCover
+        ? `<div class="pcard-noimg"><div class="pcard-noimg-title">${p.title}</div></div>`
+        : `<img src="${p.cover}" alt="${p.title}" loading="lazy">`}
+      ${p.designOnly ? `<div class="pcard-badge">Design</div>` : ''}
+      <div class="pcard-ov">
+        <div class="pcard-n">0${i+1}</div>
+        <div class="pcard-title">${p.title}</div>
+        <div class="pcard-sub">${p.subtitle}</div>
+        <div class="pcard-cat">${p.type}</div>
+        ${p.area?`<div class="pcard-area">${p.area}</div>`:''}
+      </div>
+      <div class="pcard-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    </div>`).join('');
+  el.querySelectorAll('.rv').forEach(e=>{obs.observe(e);e.classList.remove('in')});
+  el.querySelectorAll('.pcard').forEach(e=>{
+    e.addEventListener('mouseenter',()=>cur2.classList.add('big'));
+    e.addEventListener('mouseleave',()=>cur2.classList.remove('big'));
+  });
+}
+
+// ═══════════════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════════════
+const modal = document.getElementById('modal');
+let allData = [...projects, ...competitions, ...graduation];
+let curImgs = [], curImgIdx = 0;
+
+function openModal(id){
+  const p = allData.find(x=>x.id===id);
+  if(!p) return;
+  document.getElementById('modal-title').textContent = p.title;
+  document.getElementById('modal-subtitle').textContent = p.subtitle + ' — ' + p.type;
+  // specs strip
+  let specsEl = document.getElementById('modal-specs');
+  if(!specsEl){ specsEl = document.createElement('div'); specsEl.id='modal-specs'; document.getElementById('modal-title-wrap').appendChild(specsEl); }
+  const chips = [];
+  if(p.area)     chips.push(`<div class="spec-chip"><strong>${p.area}</strong> Area</div>`);
+  if(p.year)     chips.push(`<div class="spec-chip"><strong>${p.year}</strong> Year</div>`);
+  if(p.location) chips.push(`<div class="spec-chip"><strong>${p.location}</strong></div>`);
+  if(p.scope)    chips.push(`<div class="spec-chip"><strong>${p.scope}</strong></div>`);
+  specsEl.innerHTML = chips.join('');
+  const tabs = Object.keys(p.tabs);
+  const tabsEl = document.getElementById('modal-tabs');
+  const bodyEl = document.getElementById('modal-body');
+  tabsEl.innerHTML = tabs.map((t,i)=>`<button class="mtab${i===0?' active':''}" onclick="switchTab(this,'tab-${i}')">${t}</button>`).join('');
+  bodyEl.innerHTML = tabs.map((t,i)=>{
+    const imgs = p.tabs[t];
+    const isActive = i===0 ? 'active' : '';
+    if(typeof imgs[0]==='string'){
+      // images
+      return `<div class="tab-panel ${isActive}" id="tab-${i}">
+        ${imgs.map((src,j)=>`<div class="tab-img" onclick="openMLB(${i},${j},${id})"><img src="${src}" alt="" loading="lazy"></div>`).join('')}
+      </div>`;
+    } else {
+      // PDFs
+      return `<div class="tab-panel ${isActive}" id="tab-${i}" style="display:${isActive?'flex':'none'};flex-direction:column;gap:.8rem">
+        ${imgs.map(pdf=>`<a class="tab-pdf" href="${pdf.pdf}" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <div class="tab-pdf-info"><div class="tab-pdf-name">${pdf.name}</div><div class="tab-pdf-size">PDF · ${pdf.size||''}</div></div>
+        </a>`).join('')}
+      </div>`;
+    }
+  }).join('');
+  modal.classList.add('show');
+  document.body.style.overflow='hidden';
+  document.getElementById('modal-body').scrollTop=0;
+}
+
+function switchTab(btn, panelId){
+  document.querySelectorAll('.mtab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tab-panel').forEach(p=>{p.classList.remove('active');p.style.display='none'});
+  const panel = document.getElementById(panelId);
+  panel.classList.add('active');
+  panel.style.display = panel.style.display==='none'||!panel.style.display ? 'grid' : 'grid';
+  if(panel.querySelectorAll('.tab-pdf').length>0){ panel.style.display='flex'; }
+}
+
+function closeModal(){modal.classList.remove('show');document.body.style.overflow='';}
+document.getElementById('modal-close').onclick = closeModal;
+document.getElementById('modal-bg').onclick = closeModal;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMLB();closeModal();}});
+
+// ═══════════════════════════════════════════════════
+// IMAGE LIGHTBOX (within modal)
+// ═══════════════════════════════════════════════════
+const mlb = document.getElementById('mlb');
+const mlbImg = document.getElementById('mlb-img');
+let mlbImgs=[], mlbIdx=0;
+
+function openMLB(tabIdx, imgIdx, projectId){
+  const p = allData.find(x=>x.id===projectId);
+  const tabKey = Object.keys(p.tabs)[tabIdx];
+  const imgs = p.tabs[tabKey];
+  if(typeof imgs[0]!=='string') return;
+  mlbImgs = imgs; mlbIdx = imgIdx;
+  updateMLB();
+  mlb.classList.add('show');
+}
+function preloadMLB(){
+  if(mlbImgs.length<2) return;
+  [ (mlbIdx+1)%mlbImgs.length, (mlbIdx-1+mlbImgs.length)%mlbImgs.length ]
+    .forEach(k=>{ const im=new Image(); im.src=mlbImgs[k]; });
+}
+function updateMLB(){
+  mlbImg.classList.add('fade');
+  setTimeout(()=>{ mlbImg.src=mlbImgs[mlbIdx]; mlbImg.classList.remove('fade'); },180);
+  document.getElementById('mlb-cur').textContent = mlbIdx+1;
+  document.getElementById('mlb-tot').textContent = mlbImgs.length;
+  preloadMLB();
+}
+function mlbPrev(){ mlbIdx=(mlbIdx-1+mlbImgs.length)%mlbImgs.length; updateMLB(); }
+function mlbNext(){ mlbIdx=(mlbIdx+1)%mlbImgs.length; updateMLB(); }
+function closeMLB(){ mlb.classList.remove('show'); }
+document.getElementById('mlb-close').onclick = closeMLB;
+document.getElementById('mlb-prev').onclick = mlbPrev;
+document.getElementById('mlb-next').onclick = mlbNext;
+mlb.addEventListener('click',e=>{ if(e.target===mlb) closeMLB(); });
+document.addEventListener('keydown',e=>{
+  if(!mlb.classList.contains('show')) return;
+  if(e.key==='ArrowLeft') mlbPrev();
+  else if(e.key==='ArrowRight') mlbNext();
+});
+let mlbTouchX=0;
+mlb.addEventListener('touchstart',e=>{ mlbTouchX=e.changedTouches[0].clientX; },{passive:true});
+mlb.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-mlbTouchX;
+  if(dx>40) mlbPrev(); else if(dx<-40) mlbNext();
+},{passive:true});
+
+// ═══════════════════════════════════════════════════
+// CURSOR
+// ═══════════════════════════════════════════════════
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+let mx=0,my=0,fx=0,fy=0;
+document.addEventListener('mousemove',e=>{ mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'; });
+(function tick(){fx+=(mx-fx)*.13;fy+=(my-fy)*.13;cur2.style.left=fx+'px';cur2.style.top=fy+'px';requestAnimationFrame(tick);})();
+document.querySelectorAll('a,button').forEach(e=>{ e.addEventListener('mouseenter',()=>cur2.classList.add('big')); e.addEventListener('mouseleave',()=>cur2.classList.remove('big')); });
+
+// ═══════════════════════════════════════════════════
+// LOADER
+// ═══════════════════════════════════════════════════
+const ll=document.getElementById('ll');
+'SB'.split('').forEach((c,i)=>{ const s=document.createElement('span');s.textContent=c;s.style.setProperty('--i',i);ll.appendChild(s); });
+setTimeout(()=>document.getElementById('loader').classList.add('done'),1600);
+
+// ═══════════════════════════════════════════════════
+// NAV
+// ═══════════════════════════════════════════════════
+const navEl=document.getElementById('nav'),progEl=document.getElementById('progress');
+let scrollTicking=false;
+function onScroll(){
+  navEl.classList.toggle('scrolled',scrollY>60);
+  const h=document.documentElement.scrollHeight-innerHeight;
+  progEl.style.width=(h>0?(scrollY/h)*100:0)+'%';
+  scrollTicking=false;
+}
+window.addEventListener('scroll',()=>{ if(!scrollTicking){ requestAnimationFrame(onScroll); scrollTicking=true; } });
+onScroll();
+const nt=document.getElementById('nt'),nl=document.getElementById('nl');
+nt.addEventListener('click',()=>{ nl.classList.toggle('open');nt.classList.toggle('open'); });
+function closeMenu(){ nl.classList.remove('open');nt.classList.remove('open'); }
+
+// ═══════════════════════════════════════════════════
+// REVEAL
+// ═══════════════════════════════════════════════════
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }),{threshold:.08});
+document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+const byArea = arr => [...arr].sort((a,b)=>{
+  const pa = a.priority||999, pb = b.priority||999;
+  if(pa!==pb) return pa-pb;
+  return (b.year||0)-(a.year||0);
+});
+renderGrid(byArea(projects.filter(p=>p.country==='Egypt')), 'pgrid-eg');
+renderGrid(byArea(projects.filter(p=>p.country==='KSA')),   'pgrid-ksa');
+renderGrid(byArea(projects.filter(p=>p.country==='UAE')),   'pgrid-uae');
+renderGrid(competitions,'cgrid');
+
+// ═══════════════════════════════════════════════════
+// CONTACT FORM
+// ═══════════════════════════════════════════════════
+document.getElementById('cform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const btn=document.getElementById('sbtn');
+  const name=document.getElementById('fn').value.trim();
+  const email=document.getElementById('fe').value.trim();
+  const subject=document.getElementById('fs').value.trim() || ('Portfolio inquiry from '+name);
+  const message=document.getElementById('fm').value.trim();
+  const body=message+'\n\n— '+name+' ('+email+')';
+  const href='mailto:samira_belal@yahoo.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  btn.textContent='Opening your email app…';
+  location.href=href;
+  setTimeout(()=>{ btn.textContent='Send Message'; },3000);
+});
+
+// ═══════════════════════════════════════════════════
+// IMAGE FADE-IN
+// ═══════════════════════════════════════════════════
+document.addEventListener('load',e=>{
+  const t=e.target;
+  if(t.tagName==='IMG' && (t.closest('.pcard')||t.closest('.tab-img'))) t.classList.add('loaded');
+},true);
+document.querySelectorAll('.pcard img,.tab-img img').forEach(im=>{ if(im.complete) im.classList.add('loaded'); });
+</script>
+</body>
+</html>
