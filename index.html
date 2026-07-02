@@ -80,7 +80,7 @@ nav.scrolled{padding:1rem 5rem;background:rgba(237,234,229,.94);backdrop-filter:
 #progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:10001;transition:width .05s linear}
 
 /* ── Hero ── */
-.hero{height:100vh;min-height:600px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5rem 7rem;position:relative;overflow:hidden}
+.hero{height:100vh;height:100svh;min-height:560px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5rem 7rem;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-image:url('Projects/AGORA Resturante-Grand Egyption meusem/Main photo/2414_ACR_ID_REN_DD_1002_00.jpg');background-size:cover;background-position:center;filter:saturate(.75);animation:kenburns 18s var(--ease) forwards}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(237,234,229,.82) 0%,rgba(237,234,229,.55) 100%)}
 @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.06)}}
@@ -279,7 +279,7 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   .nav-links.open{display:flex}
   .nav-links a{font-size:.9rem}
   .nav-toggle{display:flex}
-  .hero{padding:0 2rem 5rem}
+  .hero{padding:0 2rem 3.5rem}
   .hero-letter{font-size:9rem;right:1rem}
   .hero-ctas{margin-top:1.8rem;gap:.8rem}
   .hero-cta{padding:.9rem 1.8rem;font-size:.66rem;white-space:nowrap}
@@ -287,7 +287,7 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   .hero-scroll{display:none}
   .sec{padding:5rem 2rem}
   .stats-bar{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .stat{border-right:none;border-bottom:1px solid var(--border)}
+  .stat{padding:2rem 1.5rem;border-right:none;border-bottom:1px solid var(--border)} .stat:nth-child(odd){border-right:1px solid var(--border)} .stat:nth-child(n+3){border-bottom:none} .stat-n{white-space:nowrap} .stat-l{white-space:nowrap;font-size:.6rem;letter-spacing:.1em}
   .pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cgrid{grid-template-columns:1fr}
   .cgrid .pcard{height:320px}
@@ -310,6 +310,12 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   .tl-item::before{left:calc(-2rem - 4px)}
 }
 @media(max-width:480px){
+  .hero{min-height:500px}
+  .hero-tag{margin-bottom:1.3rem;letter-spacing:.32em}
+  .hero-title{font-size:clamp(3.2rem,15vw,4.2rem);margin-bottom:1.8rem}
+  .hero-sub{font-size:.8rem;max-width:300px;line-height:1.8}
+  .stat{padding:1.6rem 1.2rem}
+  .stat-n{font-size:clamp(1.6rem,8vw,2.4rem)}
   .pgrid{grid-template-columns:minmax(0,1fr)}
   .tab-panel{grid-template-columns:1fr}
   .tab-img.wide{grid-column:span 1}
