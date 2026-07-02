@@ -31,7 +31,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -66,7 +66,7 @@ nav.scrolled{padding:1rem 5rem;background:rgba(237,234,229,.94);backdrop-filter:
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;letter-spacing:.12em;color:var(--text);text-decoration:none;cursor:none}
 .nav-logo em{color:var(--accent);font-style:normal}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;transition:color .3s;cursor:none;position:relative}
+.nav-links a{color:var(--text);text-decoration:none;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:color .3s;cursor:none;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--accent);transition:width .3s}
 .nav-links a:hover{color:var(--accent)}
 .nav-links a:hover::after{width:100%}
@@ -86,14 +86,17 @@ nav.scrolled{padding:1rem 5rem;background:rgba(237,234,229,.94);backdrop-filter:
 @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.06)}}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 65% 45%,rgba(92,88,80,.06) 0%,transparent 60%)}
 .hero-letter{position:absolute;top:50%;right:3rem;transform:translateY(-52%);font-family:'Cormorant Garamond',serif;font-size:clamp(14rem,28vw,26rem);font-weight:300;line-height:1;color:rgba(92,88,80,.05);pointer-events:none;user-select:none}
-.hero-tag{position:relative;z-index:1;font-size:.68rem;letter-spacing:.45em;text-transform:uppercase;color:var(--accent);margin-bottom:1.8rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s var(--ease) 1.8s forwards}
+.hero-tag{position:relative;z-index:1;font-size:.68rem;font-weight:600;letter-spacing:.45em;text-transform:uppercase;color:var(--accent);margin-bottom:1.8rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s var(--ease) 1.8s forwards}
 .hero-title{position:relative;z-index:1;font-family:'Cormorant Garamond',serif;font-size:clamp(4rem,9.5vw,10.5rem);font-weight:300;line-height:.92;margin-bottom:3rem}
 .hero-row{display:block;overflow:hidden}
 .hero-row span{display:block;opacity:0;transform:translateY(105%);animation:slideUpFade .9s var(--ease) forwards}
 .hero-row:nth-child(1) span{animation-delay:1.9s}
 .hero-row:nth-child(2) span{animation-delay:2.05s;color:var(--accent);font-style:italic}
-.hero-sub{position:relative;z-index:1;max-width:360px;font-size:.84rem;color:var(--muted);line-height:1.9;opacity:0;animation:fadeUp .8s var(--ease) 2.3s forwards}
-.hero-cta{position:relative;z-index:1;align-self:flex-start;margin-top:2.2rem;opacity:0;transform:translateY(20px);animation:fadeUp .8s var(--ease) 2.45s forwards}
+.hero-sub{position:relative;z-index:1;max-width:360px;font-size:.86rem;font-weight:500;color:var(--text);line-height:1.9;opacity:0;animation:fadeUp .8s var(--ease) 2.3s forwards}
+.hero-ctas{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:1rem;align-self:flex-start;align-items:center;margin-top:2.2rem}
+.hero-ctas .hero-cta{position:relative;z-index:1;margin-top:0;opacity:0;transform:translateY(20px);animation:fadeUp .8s var(--ease) 2.45s forwards}
+.hero-ctas .hero-cta-solid{background:var(--accent);color:var(--bg);animation-delay:2.6s}
+.hero-ctas .hero-cta-solid:hover{background:var(--accent2);color:var(--bg)}
 .hero-cta-size{opacity:.6;letter-spacing:.12em;margin-left:-.4rem}
 .hero-scroll{position:absolute;right:5rem;bottom:3.5rem;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.2rem;opacity:0;animation:fadeUp .8s var(--ease) 2.5s forwards}
 .hero-scroll span{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
@@ -106,15 +109,16 @@ nav.scrolled{padding:1rem 5rem;background:rgba(237,234,229,.94);backdrop-filter:
 .stats-bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .stat{padding:2.5rem 3rem;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
-.stat-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--accent);line-height:1}
-.stat-l{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:500;color:var(--accent);line-height:1}
+.stat-n.sm{font-size:2rem;line-height:1.5}
+.stat-l{font-size:.65rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
 
 /* ── Common ── */
 .sec{padding:8rem 5rem}
 section[id]{scroll-margin-top:90px}
-.tag{display:inline-flex;align-items:center;gap:1rem;font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);margin-bottom:1.6rem}
+.tag{display:inline-flex;align-items:center;gap:1rem;font-size:.65rem;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);margin-bottom:1.6rem}
 .tag::before{content:'';width:28px;height:1px;background:var(--accent)}
-.h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,5.5rem);font-weight:300;line-height:1.05;margin-bottom:4rem}
+.h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,5.5rem);font-weight:400;line-height:1.05;margin-bottom:4rem}
 .rv{opacity:0;transform:translateY(38px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
 .rv.in{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.42s}
@@ -159,26 +163,26 @@ img{max-width:100%}
 
 /* ── About ── */
 .about-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:7rem;align-items:center}
-.about-text{font-size:.88rem;color:var(--muted);line-height:2;margin:2rem 0}
-.about-text strong{color:var(--text);font-weight:400}
-.btn-outline{display:inline-flex;align-items:center;gap:1rem;margin-top:2rem;padding:1rem 2.5rem;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s;cursor:none}
+.about-text{font-size:.9rem;color:var(--text);line-height:2;margin:2rem 0}
+.about-text strong{color:var(--text);font-weight:600}
+.btn-outline{display:inline-flex;align-items:center;gap:1rem;margin-top:2rem;padding:1rem 2.5rem;border:1.5px solid var(--accent);color:var(--accent);text-decoration:none;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;transition:background .3s,color .3s;cursor:none}
 .btn-outline:hover{background:var(--accent);color:var(--bg)}
 .btn-outline svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.5}
 
 /* ── Experience timeline ── */
-.tl{position:relative;margin-left:1rem;padding-left:3rem;border-left:1px solid var(--border)}
+.tl{position:relative;margin-left:1rem;padding-left:3rem;border-left:2px solid rgba(81,76,68,.3)}
 .tl-item{position:relative;padding-bottom:3.5rem}
 .tl-item:last-of-type{padding-bottom:2rem}
-.tl-item::before{content:'';position:absolute;left:calc(-3rem - 4px);top:.5rem;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--bg2)}
-.tl-period{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
-.tl-role{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,2.6vw,2.2rem);font-weight:300;line-height:1.15}
-.tl-company{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:.35rem}
-.tl-desc{font-size:.86rem;color:var(--muted);line-height:1.95;margin-top:1rem;max-width:720px}
+.tl-item::before{content:'';position:absolute;left:calc(-3rem - 6px);top:.35rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg2)}
+.tl-period{display:inline-block;font-size:.6rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:.38rem 1rem;margin-bottom:.9rem}
+.tl-role{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:500;line-height:1.15;color:var(--text)}
+.tl-company{font-size:.78rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-top:.45rem}
+.tl-desc{font-size:.9rem;font-weight:400;color:var(--text);line-height:1.9;margin-top:1rem;max-width:720px}
 .tl-chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.2rem}
-.tl-chip{font-size:.62rem;letter-spacing:.1em;color:var(--text);padding:.35rem .8rem;border:1px solid var(--border);border-radius:20px;background:var(--bg)}
+.tl-chip{font-size:.64rem;font-weight:500;letter-spacing:.08em;color:var(--text);padding:.4rem .9rem;border:1px solid rgba(81,76,68,.4);border-radius:20px;background:var(--bg)}
 .tl-edu{margin-top:1rem;padding-top:2.5rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;align-items:baseline;gap:.5rem 1.2rem}
-.tl-edu-label{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
-.tl-edu-text{font-size:.9rem;color:var(--text)}
+.tl-edu-label{font-size:.62rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+.tl-edu-text{font-size:.92rem;font-weight:500;color:var(--text)}
 .tl-edu-text em{font-style:italic;color:var(--muted)}
 
 /* ── Contact ── */
@@ -277,7 +281,8 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   .nav-toggle{display:flex}
   .hero{padding:0 2rem 5rem}
   .hero-letter{font-size:9rem;right:1rem}
-  .hero-cta{margin-top:1.8rem;padding:.9rem 1.8rem;font-size:.66rem;white-space:nowrap}
+  .hero-ctas{margin-top:1.8rem;gap:.8rem}
+  .hero-cta{padding:.9rem 1.8rem;font-size:.66rem;white-space:nowrap}
   .hero-cta-size{display:none}
   .hero-scroll{display:none}
   .sec{padding:5rem 2rem}
@@ -354,7 +359,10 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
     <span class="hero-row"><span>Belal</span></span>
   </h1>
   <p class="hero-sub">Crafting precise technical documentation and transforming design visions into buildable, beautiful realities.</p>
-  <a href="Samira-Belal-Portfolio.pdf" download class="btn-outline hero-cta">Download Portfolio (PDF) <span class="hero-cta-size">· 9 MB</span> <svg viewBox="0 0 24 24"><path d="M12 3v13M6 11l6 6 6-6M5 21h14"/></svg></a>
+  <div class="hero-ctas">
+    <a href="Samira-Belal-Portfolio.pdf" download class="btn-outline hero-cta">Download Portfolio (PDF) <span class="hero-cta-size">· 9 MB</span> <svg viewBox="0 0 24 24"><path d="M12 3v13M6 11l6 6 6-6M5 21h14"/></svg></a>
+    <a href="Samira-Belal-CV.pdf" download class="btn-outline hero-cta hero-cta-solid">Download CV <svg viewBox="0 0 24 24"><path d="M12 3v13M6 11l6 6 6-6M5 21h14"/></svg></a>
+  </div>
   <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
@@ -362,7 +370,7 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
 <div class="stats-bar">
   <div class="stat rv"><div class="stat-n">20+</div><div class="stat-l">Projects</div></div>
   <div class="stat rv d1"><div class="stat-n">3+</div><div class="stat-l">Years Experience</div></div>
-  <div class="stat rv d2"><div class="stat-n">EG&nbsp;/&nbsp;KSA</div><div class="stat-l">Markets</div></div>
+  <div class="stat rv d2"><div class="stat-n sm">EGY&nbsp;/&nbsp;KSA</div><div class="stat-l">Markets</div></div>
   <div class="stat rv d3"><div class="stat-n">3,100 m²</div><div class="stat-l">Largest Fit-Out</div></div>
 </div>
 
@@ -523,6 +531,7 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   <div class="f-copy">© 2026 Samira Belal. All rights reserved.</div>
   <div class="f-social">
     <a href="Samira-Belal-Portfolio.pdf" download>Portfolio PDF</a>
+    <a href="Samira-Belal-CV.pdf" download>CV</a>
     <a href="https://www.linkedin.com/in/samira-belal" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </footer>
