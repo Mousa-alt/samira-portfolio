@@ -36,13 +36,14 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#edeae5;--bg2:#e0dcd6;--bg3:#d4cfc9;
-  --text:#38342f;--muted:#7a756e;
-  --accent:#5c5850;--accent2:#807b73;
-  --border:rgba(92,88,80,.18);
+  --text:#2b2823;--muted:#5f5a52;
+  --accent:#514c44;--accent2:#6e6961;
+  --border:rgba(81,76,68,.24);
   --ease:cubic-bezier(.25,.46,.45,.94);
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden;cursor:none}
+html{overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;cursor:none}
 
 /* ── Cursor ── */
 #cur{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%)}
@@ -102,7 +103,7 @@ nav.scrolled{padding:1rem 5rem;background:rgba(237,234,229,.94);backdrop-filter:
 @keyframes slideUpFade{to{opacity:1;transform:translateY(0)}}
 
 /* ── Stats bar ── */
-.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-bar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .stat{padding:2.5rem 3rem;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
 .stat-n{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--accent);line-height:1}
@@ -119,8 +120,9 @@ section[id]{scroll-margin-top:90px}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.42s}
 
 /* ── Projects Grid ── */
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.pcard{position:relative;overflow:hidden;cursor:none;background:var(--bg3);aspect-ratio:4/3}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.pcard{position:relative;overflow:hidden;cursor:none;background:var(--bg3);aspect-ratio:4/3;min-width:0;max-width:100%}
+img{max-width:100%}
 .pcard img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:transform .85s var(--ease),opacity .6s var(--ease)}
 .pcard img.loaded,.tab-img img.loaded{opacity:1}
 .pcard:hover img{transform:scale(1.06)}
@@ -145,7 +147,7 @@ section[id]{scroll-margin-top:90px}
 .sec-divider-text{font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 
 /* ── Competitions grid (2 cols) ── */
-.cgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .cgrid .pcard{height:480px}
 
 /* ── Graduation ── */
@@ -279,9 +281,9 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   .hero-cta-size{display:none}
   .hero-scroll{display:none}
   .sec{padding:5rem 2rem}
-  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stats-bar{grid-template-columns:repeat(2,minmax(0,1fr))}
   .stat{border-right:none;border-bottom:1px solid var(--border)}
-  .pgrid{grid-template-columns:1fr 1fr}
+  .pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cgrid{grid-template-columns:1fr}
   .cgrid .pcard{height:320px}
   .about-wrap{grid-template-columns:1fr;gap:4rem}
@@ -303,10 +305,10 @@ footer{padding:2rem 5rem;border-top:1px solid var(--border);display:flex;align-i
   .tl-item::before{left:calc(-2rem - 4px)}
 }
 @media(max-width:480px){
-  .pgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:minmax(0,1fr)}
   .tab-panel{grid-template-columns:1fr}
   .tab-img.wide{grid-column:span 1}
-  .stats-bar{grid-template-columns:1fr 1fr}
+  .stats-bar{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(prefers-reduced-motion:reduce){
   .hero-bg{animation:none}
